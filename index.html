@@ -9,16 +9,28 @@
 
 <body>
     <div id="app">
-        <h1>123</h1>
+        <h1>{{test}}</h1>
+        <input type="text" y-model="test">
+        <input type="text" y-model="msg">
+        <input type="text" y-model="msg">
+        <input type="text" y-model="class.student">
+        <h2>{{class.student}}</h2>
+        <p>{{msg}}</p>
+        <ul>
+            <li>{{msg}}</li>
+        </ul>
     </div>
     <script>
-        var vm = new yvue();
-        // var vm = new yvue({
-        //     el: '#app',
-        //     data: {
-        //         msg: 'hello world!'
-        //     }
-        // })
+        var vm = new yvue({
+            el: '#app',
+            data: {
+                msg: 'hello world!',
+                test: 'this is test',
+                class: {
+                    student: 'syh'
+                }
+            }
+        })
     </script>
 </body>
 
